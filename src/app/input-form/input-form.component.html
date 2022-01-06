@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12">
+      <h1>Task Management</h1>
+      <label>Title</label>
+      <input type="text" class="form-control" [(ngModel)] = "newtaskName">
+      <label>Description</label>
+      <input type="text" class="form-control" [(ngModel)] = "newtaskContent"> <br>
+      <button
+        class="btn btn-primary"
+        (click)="onAddtask()">Add Task</button>
+      <button
+      class="btn btn-primary"
+      (click)="onAddgoal()">
+      Add Goal this Week
+      </button>
+      
+    </div>
+  </div>
