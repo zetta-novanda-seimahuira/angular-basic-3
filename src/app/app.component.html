@@ -3,21 +3,39 @@
   (taskCreated)="ontaskAdded($event)" 
   (bpCreated)="ongoalAdded($event)"
   ></app-input-form>
-</div> 
-<hr>
+
+  <hr>
 <div class="row">
-  <div class="col-xs-6"></div>
   <div class="col-xs-6">
     <div class="row">
       <div class="col-xs-12">
-        <app-card 
-        *ngFor = "let taskElement of taskElements"
-        [srvElement]="taskElement"
-        ></app-card>
+        <h3>Goal in This Week</h3>
+        <ng-container *ngFor = "let taskElement of taskElements">
+          <div *ngIf="taskElement.type=='goal'">
+            <app-card 
+            [srvElement]="taskElement"
+            ></app-card>
+          </div>
+        </ng-container>
       </div>
     </div>
-    
   </div>
-
-  
+  <div class="col-xs-6">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Task</h3>
+        <div class="row" >
+          <ng-container *ngFor = "let taskElement of taskElements">
+            
+            <div *ngIf="taskElement.type=='task'">
+              <app-card 
+              [srvElement]="taskElement"
+              ></app-card>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+</div> 

@@ -2,12 +2,11 @@
     <div class="panel-heading">{{element.name}}</div>
     <div class="panel-body">
       <p>
-        <strong *ngIf="element.type==='task'" style="color: red">{{element.content}}</strong>
-        <em *ngIf="element.type === 'goal'">{{element.content}}{{element.type}}</em>
+        <strong *ngIf="element.type==='task'">{{element.content}}</strong>
+        <strong *ngIf="element.type === 'goal'">{{element.content}}</strong>
       </p>
     </div>
     <div class="panel-footer">
         <button class="btn btn-warning" disabled>{{element.type}}</button>
     </div>
-
 </div>

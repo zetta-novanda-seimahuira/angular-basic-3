@@ -10,6 +10,7 @@ export class InputFormComponent implements OnInit {
   @Output('bpCreated') goalCreated= new EventEmitter<{taskName: string, taskContent: string}>();
   newtaskName = '';
   newtaskContent = '';
+  newId= '';
 
   constructor() { }
 
@@ -27,6 +28,7 @@ export class InputFormComponent implements OnInit {
     this.goalCreated.emit({
       taskName: this.newtaskName,
       taskContent: this.newtaskContent
+      
     })
   }
 
