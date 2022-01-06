@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input('srvElement') element: {type: string, name: string, content:string, cardId:number };
+  @Input('tskElement') element: {type: string, name: string, content:string, cardId:number };
   constructor() { }
 
   ngOnInit(): void {

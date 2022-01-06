@@ -3,7 +3,6 @@
   (taskCreated)="ontaskAdded($event)" 
   (bpCreated)="ongoalAdded($event)"
   ></app-input-form>
-
   <hr>
 <div class="row">
   <div class="col-xs-6">
@@ -13,7 +12,7 @@
         <ng-container *ngFor = "let taskElement of taskElements">
           <div *ngIf="taskElement.type=='goal'">
             <app-card 
-            [srvElement]="taskElement"
+            [tskElement]="taskElement"
             ></app-card>
           </div>
         </ng-container>
@@ -29,7 +28,7 @@
             
             <div *ngIf="taskElement.type=='task'">
               <app-card 
-              [srvElement]="taskElement"
+              [tskElement]="taskElement"
               ></app-card>
             </div>
           </ng-container>
